@@ -1,5 +1,9 @@
 package com.success.section3;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.LinkedList;
+
 public class SlidingWindow3 {
 
     public String minCoverSubArray(String str, String tar) {
@@ -30,5 +34,26 @@ public class SlidingWindow3 {
             }
         }
         return len == Integer.MAX_VALUE ? "" : str.substring(start, len);
+    }
+
+
+    public static void main(String[] args) {
+        Deque<Integer> list = new LinkedList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
+        System.out.println(list.peekFirst());
+        System.out.println(list.peekLast());
+
+        Deque<Integer> deque = new ArrayDeque<>();
+
+        deque.add(1);
+        deque.add(2);
+        deque.add(3);
+        // deque.offer() is better than add in return false
+        System.out.println(deque.peekFirst());
+        System.out.println(deque.pollFirst());
+        System.out.println(deque.peekLast());
     }
 }

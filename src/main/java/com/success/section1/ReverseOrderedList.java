@@ -25,7 +25,10 @@ public class ReverseOrderedList {
         if (head == null || head.next == null) {
             return head;
         }
-// TODO
+        // TODO
+//        while (true) {
+//            Thread.sleep(0);
+//        }
         return null;
 
     }
